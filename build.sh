@@ -27,8 +27,8 @@ pushd "${OUT_DIR}"
 git clone --single-branch --branch bpf-tools-v1.29 https://github.com/solana-labs/rust.git
 echo "$( cd rust && git rev-parse HEAD )  https://github.com/solana-labs/rust.git" >> version.md
 
-git clone --single-branch --branch bpf-tools-v1.29 https://github.com/solana-labs/cargo.git
-echo "$( cd cargo && git rev-parse HEAD )  https://github.com/solana-labs/cargo.git" >> version.md
+git clone --single-branch --branch guibescos/bump-compiler-builtins https://github.com/guibescos/cargo.git
+echo "$( cd cargo && git rev-parse HEAD )  https://github.com/guibescos/cargo.git" >> version.md
 
 pushd rust
 ./build.sh
